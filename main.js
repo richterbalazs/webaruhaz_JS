@@ -4,6 +4,7 @@ import { arRendezes, nevRendezes } from "./rendezes.js";
 
 let nevIrany = 1;
 let arIrany = 1;
+const kosarLISTA = [];
 
 function init(lista){
     megjelenit(kartyaRendezes(lista));
@@ -12,6 +13,7 @@ function init(lista){
 init(POLOKLISTA);
 nevRendez();
 arRendez();
+kosarbaRak();
 
 function nevRendez(){
     const nevRendezELEM = $("#nev")
@@ -22,6 +24,7 @@ function nevRendez(){
     })
 }
 
+
 function arRendez(){
     const arELEM = $("#ar")
     arELEM.on("click", function(){
@@ -30,4 +33,7 @@ function arRendez(){
         arIrany *= (-1)
     })
 }
-init(POLOKLISTA);
+
+function kosarbaRak(event){
+    
+}
