@@ -18,5 +18,15 @@ export const POLOKLISTA = [
         nev: "Levis",
         ar: 11000,
         kep: "kepek/Levis.avif"
-    }
+    },
+    {
+        nev: "Adidas",
+        ar: 15000,
+        kep: "kepek/adidas.avif"
+    },
+    {
+        nev: "Hollister",
+        ar: 7500,
+        kep: "kepek/hollister.avif"
+    },
 ]
