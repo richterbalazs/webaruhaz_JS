@@ -37,7 +37,6 @@ function szuresEsemeny() {
     const keresELEM = $(".szuro");
     keresELEM.on("keyup", function () {
       let keresoSzoveg = keresELEM.val();
-      console.log(keresoSzoveg);
       const szurtLISTA = szuresNevSzerint(POLOKLISTA, keresoSzoveg);
       init(szurtLISTA);
     });
