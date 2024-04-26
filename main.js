@@ -1,6 +1,6 @@
 import { POLOKLISTA } from "./adat.js";
 import { kartyaRendezes, megjelenit } from "./kartyaMegjelenit.js";
-import { arRendezes, nevRendezes } from "./rendezes.js";
+import { arRendezes, nevRendezes, szuresNevSzerint } from "./rendezes.js";
 
 let nevIrany = 1;
 let arIrany = 1;
@@ -13,7 +13,7 @@ function init(lista){
 init(POLOKLISTA);
 nevRendez();
 arRendez();
-kosarbaRak();
+szuresEsemeny();
 
 function nevRendez(){
     const nevRendezELEM = $("#nev")
@@ -24,7 +24,6 @@ function nevRendez(){
     })
 }
 
-
 function arRendez(){
     const arELEM = $("#ar")
     arELEM.on("click", function(){
@@ -34,6 +33,12 @@ function arRendez(){
     })
 }
 
-function kosarbaRak(event){
-    
-}
+function szuresEsemeny() {
+    const keresELEM = $(".szuro");
+    keresELEM.on("keyup", function () {
+      let keresoSzoveg = keresELEM.val();
+      console.log(keresoSzoveg);
+      const szurtLISTA = szuresNevSzerint(POLOKLISTA, keresoSzoveg);
+      init(szurtLISTA);
+    });
+  }
