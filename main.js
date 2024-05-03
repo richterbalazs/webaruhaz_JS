@@ -60,6 +60,7 @@ function kosarbaRak(lista) {
             kosarInit();
         }
     })
+    
 }
 
 

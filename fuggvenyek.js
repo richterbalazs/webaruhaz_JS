@@ -13,9 +13,9 @@ export function tablazat(lista){
     }
     txt += "</tbody></table>";
     txt += "<h5>Rendelés végösszege:</h5>"
-    txt += "<div id=vegosszeg></div>"
+    txt += `<div id="vegosszeg"></div>`
     txt += "<br>"
-    txt += "<button type=button class=btn btn-success>Fizetés</button>"
+    txt += `<button type="button" class="btn btn-success">Fizetés</button>`
     return txt
 }
 
