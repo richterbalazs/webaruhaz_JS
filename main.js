@@ -7,13 +7,13 @@ let nevIrany = 1;
 let arIrany = 1;
 const kosarLISTA = [];
 
-function init(lista){
+function init(lista) {
     megjelenit(kartyaRendezes(lista));
     kosarbaRak(lista);
-  
+
 }
 
-function kosarInit(){
+function kosarInit() {
     kosarELEM.html(tablazat(kosarLISTA))
     kosarTorles();
 }
@@ -23,19 +23,19 @@ nevRendez();
 arRendez();
 szuresEsemeny();
 
-function nevRendez(){
+function nevRendez() {
     const nevRendezELEM = $("#nev")
-    nevRendezELEM.on("click", function(){
+    nevRendezELEM.on("click", function () {
         const rLista = nevRendezes(POLOKLISTA, nevIrany)
         init(rLista)
         nevIrany *= (-1)
     })
 }
 
-function arRendez(){
+function arRendez() {
     const arELEM = $("#ar")
-    arELEM.on("click", function(){
-        const arLista = arRendezes(POLOKLISTA,arIrany)
+    arELEM.on("click", function () {
+        const arLista = arRendezes(POLOKLISTA, arIrany)
         init(arLista)
         arIrany *= (-1)
     })
@@ -44,39 +44,33 @@ function arRendez(){
 function szuresEsemeny() {
     const keresELEM = $(".szuro");
     keresELEM.on("keyup", function () {
-      let keresoSzoveg = keresELEM.val();
-      const szurtLISTA = szuresNevSzerint(POLOKLISTA, keresoSzoveg);
-      init(szurtLISTA);
+        let keresoSzoveg = keresELEM.val();
+        const szurtLISTA = szuresNevSzerint(POLOKLISTA, keresoSzoveg);
+        init(szurtLISTA);
     });
-  }
+}
 
 const kosarELEM = $("#kosartartalom");
-function kosarbaRak(lista){
+function kosarbaRak(lista) {
     const gombELEM = $(".kosarba");
-    gombELEM.on("click", function(event){
+    gombELEM.on("click", function (event) {
         const ID = event.target.id
-            if(!kosarLISTA.includes(lista[ID])){           
-                kosarLISTA.push(lista[ID])
-               kosarInit();
-            }
-         
+        if (!kosarLISTA.includes(lista[ID])) {
+            kosarLISTA.push(lista[ID])
+            kosarInit();
+        }
     })
 }
 
 
-function kosarTorles(){
+function kosarTorles() {
     const torolELEM = $(".torol");
     console.log(torolELEM)
-    torolELEM.on("click", function(event){
+    torolELEM.on("click", function (event) {
         let index = event.target.id
         const torlesLISTA = torlesEsemeny(kosarLISTA, index)
         kosarELEM.html(tablazat(torlesLISTA))
 
         kosarInit();
     })
-}
-
-function vegosszegSzamol(){
-    const osszegSzamlalas = $(".vegosszeg")
-    
 }

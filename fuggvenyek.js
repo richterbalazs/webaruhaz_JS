@@ -12,6 +12,10 @@ export function tablazat(lista){
       txt += `<tr>`;
     }
     txt += "</tbody></table>";
+    txt += "<h5>Rendelés végösszege:</h5>"
+    txt += "<div id=vegosszeg></div>"
+    txt += "<br>"
+    txt += "<button type=button class=btn btn-success>Fizetés</button>"
     return txt
 }
 
