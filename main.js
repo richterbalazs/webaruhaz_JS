@@ -1,6 +1,7 @@
 import { POLOKLISTA } from "./adat.js";
 import { kartyaRendezes, megjelenit } from "./kartyaMegjelenit.js";
 import { arRendezes, nevRendezes, szuresNevSzerint } from "./rendezes.js";
+import { tablazat, torlesEsemeny } from "./fuggvenyek.js";
 
 let nevIrany = 1;
 let arIrany = 1;
@@ -8,6 +9,13 @@ const kosarLISTA = [];
 
 function init(lista){
     megjelenit(kartyaRendezes(lista));
+    kosarbaRak(lista);
+  
+}
+
+function kosarInit(){
+    kosarELEM.html(tablazat(kosarLISTA))
+    kosarTorles();
 }
 
 init(POLOKLISTA);
@@ -41,3 +49,34 @@ function szuresEsemeny() {
       init(szurtLISTA);
     });
   }
+
+const kosarELEM = $("#kosartartalom");
+function kosarbaRak(lista){
+    const gombELEM = $(".kosarba");
+    gombELEM.on("click", function(event){
+        const ID = event.target.id
+            if(!kosarLISTA.includes(lista[ID])){           
+                kosarLISTA.push(lista[ID])
+               kosarInit();
+            }
+         
+    })
+}
+
+
+function kosarTorles(){
+    const torolELEM = $(".torol");
+    console.log(torolELEM)
+    torolELEM.on("click", function(event){
+        let index = event.target.id
+        const torlesLISTA = torlesEsemeny(kosarLISTA, index)
+        kosarELEM.html(tablazat(torlesLISTA))
+
+        kosarInit();
+    })
+}
+
+function vegosszegSzamol(){
+    const osszegSzamlalas = $(".vegosszeg")
+    
+}

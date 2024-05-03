@@ -6,7 +6,7 @@ export function kartyaRendezes(lista){
         txt += `<div class="card-header">${lista[i].nev}</div>`
         txt += `<div class="card-body"><img src="${lista[i].kep}"class="kepek" ></div>`
         txt += `<div class="card-footer">Ár: ${lista[i].ar} Ft</div> <br>`
-        txt += `<div><button "${i}">Kosárba</button></div>`
+        txt += `<div><button id="${i}" class="kosarba">Kosárba</button></div>`
         txt += `</div>`
     }
     txt += `</div>`

@@ -47,7 +47,7 @@
         <div>
           <div class="mb-3 mt-3">
             <label for="sznev" class="form-label">Szűrés név szerint</label>
-            <input type="text" class="form-control szuro" id="sznev" placeholder="Kezdd el írni a nevet" name="szNev" />
+            <input type="text" class="form-control szuro" id="sznev" placeholder="Termék neve" name="szNev" />
           </div>
         </div>
 
@@ -57,7 +57,7 @@
 
       <div class="dropdown">
         <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-          Szűrési feltétel
+          Rendezési feltétel
         </button>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" id="ar">Ár szerint</a></li>
@@ -81,7 +81,11 @@
 
         </div>
         <br>
-        <button type="button" class="btn btn-outline-danger">Kosár tartalmának törlése - 🗑️</button>
+
+        <h5>Végösszeg:</h5>
+        <div id="vegosszeg">
+          
+        </div>
 
       </div>
     </aside>
