@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Űrlap"/>
+    <meta name="keywords" content="Webáruház, E-shop, Bolt"/>
+    <meta name="author" content="Richter Balázs Krisztián"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Richter Balázs Krisztián</title>
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+  <body>
+    <main>
+        <header class="container mt-12 row">
+            <h1>Férfi Póló Webáruház</h1>
+            <br>
+        </header>
+        <nav class="navbar navbar-expand-sm bg-light">
+
+            <div class="container-fluid">
+              <!-- Links -->
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Termékeink</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="adatok.html">Személyes adatok</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+        <article>
+          <form class="container was-validated">
+            <div class="mb-3 mt-3">
+              <label for="id" class="form-label">Megrendelő neve:</label>
+              <input type="id" class="form-control" id="id" placeholder="Kérem írja be a nevét!" name="id" pattern="^[A-Z][a-zA-Z ]{2,}$">
+              <div class="feedback">*Kötelező mező</div>
+              <div class="invalid-feedback">Követelménynek nem megfelelő formátum! A név nagybetűvel kezdődik és legalább 3 karakter hosszúságu!</div>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="telszam" class="form-label">Telefonszám:</label>
+                <input type="number" class="form-control" id="ar" placeholder="+36" name="telszam">
+                <div class="feedback">*Kötelező mező</div>
+              </div>
+            <div class="mb-3 mt-3">
+              <label for="cim" class="form-label">Számlázási cím cím:</label>
+              <input type="text" class="form-control" id="cim" placeholder="Kérem írja be a nevét!" name="id" pattern="^[A-Z][a-zA-Z ]{2,}$">
+              <div class="feedback">*Kötelező mező</div>
+              <div class="invalid-feedback">Követelménynek nem megfelelő formátum! A számlázási cím nagybetűvel kezdődik és legalább 3 karakter hosszúságu!</div>
+            </div>
+            <div class="gombok">
+              <label for="kep" class="form-label">Szállítási mód:</label>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>GLS házhoz
+                  <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">FoxPost
+                  <label class="form-check-label" for="radio2"></label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Packeta
+                  <label class="form-check-label"></label>
+                </div>
+              </div>
+            <div class="mb-3 mt-3">
+              <label for="leiras" class="form-label">Megjegyzés a rendeléshez:</label>
+              <input type="text" class="form-control" id="leiras" placeholder="Kérem írja be, hogyha van megjegyzése a rendeléséhez!" name="leiras">
+            </div>
+            <div class="mb-3 mt-3">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember"> Szeretnék feliratkozni a hírlevelükre!
+              </label>
+            </div>
+            <button type="button" class="btn btn-success">Mentem a változtatásokat</button>
+          </form>
+              
+        </article>
+        <footer class="col-lg-12">
+          <h4 class="text-center">Készítette: Richter Balázs Krisztián</h4>
+        </footer>
+        
+    </main>    
+  </body>
+</html>
