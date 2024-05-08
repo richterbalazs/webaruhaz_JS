@@ -1,22 +1,32 @@
-export function tablazat(lista){
-    let txt = ""
-    txt += "<table class='table table-striped'>";
-    txt +=
-      "<thead><tr><th>Név</th><th>Ár</th></tr></thead>";
-    txt += "<tbody>";
-    for(let i = 0; i<lista.length; i++){
-      txt += `<tr>`;
-      txt += `<td>${lista[i].nev}</td>`;
-      txt += `<td>${lista[i].ar} Ft</td>`;
-      txt += `<td class="torol" id=${i}>🗑️</td>`;
-      txt += `<tr>`;
+export function tablazat(lista) {
+  let txt = "<div class='tabla row'>";
+  txt += "<table class='table table-striped col-lg-4'>";
+  txt +=
+    "<thead><tr><th>Márka:</th><th>Ár:</th><th></th></tr></thead>";
+  txt += "<tbody>";
+  let osszeg = 0;
+  let db = 0;
+  lista.forEach((elem, index) => {
+    txt += `<tr>`;
+    for (const kulcs in elem) {
+      if (kulcs !== "kep") {
+        txt += `<td>${elem[kulcs]}</td>`;
+      }
+      if (kulcs === "ar") {
+        osszeg += parseInt(elem[kulcs]);
+      }
+     
     }
-    txt += "</tbody></table>";
-    txt += "<h5>Rendelés végösszege:</h5>"
-    txt += `<div id="vegosszeg"></div>`
-    txt += "<br>"
-    txt += `<button type="button" class="btn btn-success">Fizetés</button>`
-    return txt
+    txt += `<td class='torol' id=${"k" + index}>🗑️</td>`;
+
+    txt += `</tr>`;
+  });
+  txt += "</tbody></table></div>";
+  txt += "<div class='osszeggomb'>";
+  txt += `<h5>Végösszeg: ${osszeg} Ft</h5>`;
+  txt += `<button type="button" class="vasarlasgomb btn btn-success">Vásárlás</button>`
+  txt += "</div>";
+  return txt;
 }
 
 export function torlesEsemeny(lista, index){

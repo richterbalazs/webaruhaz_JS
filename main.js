@@ -58,11 +58,11 @@ function kosarbaRak(lista) {
         if (!kosarLISTA.includes(lista[ID])) {
             kosarLISTA.push(lista[ID])
             kosarInit();
+            alert("A tétel sikeresen hozzáadódott a kosarad tartalmához!")
         }
     })
     
 }
-
 
 function kosarTorles() {
     const torolELEM = $(".torol");
@@ -71,7 +71,7 @@ function kosarTorles() {
         let index = event.target.id
         const torlesLISTA = torlesEsemeny(kosarLISTA, index)
         kosarELEM.html(tablazat(torlesLISTA))
-
         kosarInit();
+        alert("A tételt sikeresen törölted a kosaradból!")
     })
 }
