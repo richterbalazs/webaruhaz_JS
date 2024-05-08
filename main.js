@@ -79,9 +79,7 @@ function kosarTorles() {
 
 function vasarlasGombPress(){
     const gombnyomasELEM = $(".vasarlasgomb")
-    gombnyomasELEM.on("click", function (event){
-        let index = event.target.id;
+    gombnyomasELEM.on("click", function (){
         alert("Sikeres megrendelés!")
-    
     })
 }
