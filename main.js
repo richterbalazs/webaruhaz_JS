@@ -16,6 +16,7 @@ function init(lista) {
 function kosarInit() {
     kosarELEM.html(tablazat(kosarLISTA))
     kosarTorles();
+    vasarlasGombPress();
 }
 
 init(POLOKLISTA);
@@ -73,5 +74,14 @@ function kosarTorles() {
         kosarELEM.html(tablazat(torlesLISTA))
         kosarInit();
         alert("A tételt sikeresen törölted a kosaradból!")
+    })
+}
+
+function vasarlasGombPress(){
+    const gombnyomasELEM = $(".vasarlasgomb")
+    gombnyomasELEM.on("click", function (event){
+        let index = event.target.id;
+        alert("Sikeres megrendelés!")
+    
     })
 }

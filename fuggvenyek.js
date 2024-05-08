@@ -24,6 +24,7 @@ export function tablazat(lista) {
   txt += "</tbody></table></div>";
   txt += "<div class='osszeggomb'>";
   txt += `<h5>Végösszeg: ${osszeg} Ft</h5>`;
+  txt += `<br>`;
   txt += `<button type="button" class="vasarlasgomb btn btn-success">Vásárlás</button>`
   txt += "</div>";
   return txt;
