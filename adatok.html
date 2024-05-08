@@ -36,13 +36,13 @@
         <article>
           <form class="container was-validated">
             <div class="mb-3 mt-3">
-              <label for="id" class="form-label">Megrendelő neve:</label>
-              <input type="id" class="form-control" id="id" placeholder="Kérem írja be a nevét!" name="id" pattern="^[A-Z][a-zA-Z ]{2,}$">
+              <label class="form-label">Megrendelő neve:</label>
+              <input type="text" class="form-control" id="id" placeholder="Kérem írja be a nevét!" name="nev" pattern="^[A-Z][a-zA-Z ]{2,}$">
               <div class="feedback">*Kötelező mező</div>
               <div class="invalid-feedback">Követelménynek nem megfelelő formátum! A név nagybetűvel kezdődik és legalább 3 karakter hosszúságu!</div>
             </div>
             <div class="mb-3 mt-3">
-                <label for="telszam" class="form-label">Telefonszám:</label>
+                <label class="form-label">Telefonszám:</label>
                 <input type="number" class="form-control" id="ar" placeholder="+36" name="telszam">
                 <div class="feedback">*Kötelező mező</div>
               </div>
@@ -53,7 +53,7 @@
               <div class="invalid-feedback">Követelménynek nem megfelelő formátum! A számlázási cím nagybetűvel kezdődik és legalább 3 karakter hosszúságu!</div>
             </div>
             <div class="gombok">
-              <label for="kep" class="form-label">Szállítási mód:</label>
+              <label class="form-label">Szállítási mód:</label>
                 <div class="form-check">
                   <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>GLS házhoz
                   <label class="form-check-label" for="radio1"></label>
@@ -63,7 +63,7 @@
                   <label class="form-check-label" for="radio2"></label>
                 </div>
                 <div class="form-check">
-                  <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Packeta
+                  <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">Packeta
                   <label class="form-check-label"></label>
                 </div>
               </div>
